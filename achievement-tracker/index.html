@@ -1,134 +1,223 @@
 <div class="main-container">
 
-    <!--   header -->
-    <header>
-      <button class="svg-container hamburger-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3v1Z" />
-        </svg>
+  <!--   header -->
+  <header>
+    <button class="svg-container hamburger-menu" aria-controls="nav">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M22 13c0 1.11-.89 2-2 2H4a2 2 0 1 1 0-4h9l2.5 2l2.5-2h2a2 2 0 0 1 2 2M12 3C3 3 3 9 3 9h18s0-6-9-6M3 18c0 1.66 1.34 3 3 3h12c1.66 0 3-1.34 3-3v-1H3v1Z" />
+      </svg>
+    </button>
+    <h1>The Tracker</h1>
+    <div class="dropdown" data-dropdown>
+      <button class="user-profile" type="button" aria-expanded="false" data-dropdown-button>
+        <p>
+          Welcome, <span class="important">@User</span> 👋
+        </p>
+        <div class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/1648333943664529414/u6tTu75J_400x400.jpg" alt="User profile picture">
+        </div>
       </button>
-      <h1>The Tracker</h1>
-      <div class="dropdown" data-dropdown>
-        <button class="user-profile" type="button" aria-expanded="false" data-dropdown-button>
-          <p>
-            Welcome, @User 👋
-          </p>
-          <div class="avatar">
-            <img src="https://pbs.twimg.com/profile_images/1648333943664529414/u6tTu75J_400x400.jpg" alt="User profile picture">
+      <div class="dropdown-menu">
+        <div>
+          <div class="user">
+            <p>Logged as <span>@User</span></p>
           </div>
-        </button>
-        <div class="dropdown-menu">
-          <div>
-            <div class="user">
-              <p>Logged as <span>@User</span></p>
-            </div>
-            <div class="item">
-              <a href="">
-                <div class="svg-container icon">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20.06 18a3.99 3.99 0 0 1-.2-.89c-.67.7-1.48 1.05-2.41 1.05c-.83 0-1.52-.24-2.05-.71c-.53-.45-.8-1.06-.8-1.79c0-.88.33-1.56 1-2.05c.67-.49 1.61-.73 2.83-.73h1.4v-.64c0-.49-.15-.88-.45-1.17c-.3-.29-.75-.43-1.33-.43c-.52 0-.95.12-1.3.36c-.35.25-.52.54-.52.89h-1.46c0-.43.15-.84.45-1.24c.28-.4.71-.71 1.22-.94c.51-.21 1.06-.35 1.69-.35c.98 0 1.74.24 2.29.73s.84 1.16.86 2.02V16c0 .8.1 1.42.3 1.88V18h-1.52m-2.4-1.12c.45 0 .88-.11 1.29-.32c.4-.21.7-.49.88-.83v-1.57H18.7c-1.77 0-2.66.47-2.66 1.41c0 .43.15.73.46.96c.3.23.68.35 1.16.35m-12.2-3.17h4.07L7.5 8.29l-2.04 5.42M6.64 6h1.72l4.71 12h-1.93l-.97-2.57H4.82L3.86 18H1.93L6.64 6M2 20h11v2H2v-2Z"/></svg>
+          <div class="item">
+            <a href="#" aria-hidden="true" tabindex="-1">
+              <div class="svg-container icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M20.06 18a3.99 3.99 0 0 1-.2-.89c-.67.7-1.48 1.05-2.41 1.05c-.83 0-1.52-.24-2.05-.71c-.53-.45-.8-1.06-.8-1.79c0-.88.33-1.56 1-2.05c.67-.49 1.61-.73 2.83-.73h1.4v-.64c0-.49-.15-.88-.45-1.17c-.3-.29-.75-.43-1.33-.43c-.52 0-.95.12-1.3.36c-.35.25-.52.54-.52.89h-1.46c0-.43.15-.84.45-1.24c.28-.4.71-.71 1.22-.94c.51-.21 1.06-.35 1.69-.35c.98 0 1.74.24 2.29.73s.84 1.16.86 2.02V16c0 .8.1 1.42.3 1.88V18h-1.52m-2.4-1.12c.45 0 .88-.11 1.29-.32c.4-.21.7-.49.88-.83v-1.57H18.7c-1.77 0-2.66.47-2.66 1.41c0 .43.15.73.46.96c.3.23.68.35 1.16.35m-12.2-3.17h4.07L7.5 8.29l-2.04 5.42M6.64 6h1.72l4.71 12h-1.93l-.97-2.57H4.82L3.86 18H1.93L6.64 6M2 20h11v2H2v-2Z" />
+                </svg>
               </div>
-                Preferences
-                <span>&#11122;</span>
-              </a>  
-            </div>
-            <div class="item">
-              <a href="">
-                <div class="svg-container icon">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M13.875 22h-3.75q-.375 0-.65-.25t-.325-.625l-.3-2.325q-.325-.125-.613-.3t-.562-.375l-2.175.9q-.35.125-.7.025t-.55-.425L2.4 15.4q-.2-.325-.125-.7t.375-.6l1.875-1.425Q4.5 12.5 4.5 12.337v-.674q0-.163.025-.338L2.65 9.9q-.3-.225-.375-.6t.125-.7l1.85-3.225q.175-.35.537-.438t.713.038l2.175.9q.275-.2.575-.375t.6-.3l.3-2.325q.05-.375.325-.625t.65-.25h3.75q.375 0 .65.25t.325.625l.3 2.325q.325.125.613.3t.562.375l2.175-.9q.35-.125.7-.025t.55.425L21.6 8.6q.2.325.125.7t-.375.6l-1.875 1.425q.025.175.025.338v.674q0 .163-.05.338l1.875 1.425q.3.225.375.6t-.125.7l-1.85 3.2q-.2.325-.563.438t-.712-.013l-2.125-.9q-.275.2-.575.375t-.6.3l-.3 2.325q-.05.375-.325.625t-.65.25Zm-1.825-6.5q1.45 0 2.475-1.025T15.55 12q0-1.45-1.025-2.475T12.05 8.5q-1.475 0-2.488 1.025T8.55 12q0 1.45 1.012 2.475T12.05 15.5Z"/></svg>
+              Preferences
+              <span class="svg-container icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 12H4m10 0l-4 4m4-4l-4-4m10-4v16" />
+                </svg></span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" aria-hidden="true" tabindex="-1">
+              <div class="svg-container icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M13.875 22h-3.75q-.375 0-.65-.25t-.325-.625l-.3-2.325q-.325-.125-.613-.3t-.562-.375l-2.175.9q-.35.125-.7.025t-.55-.425L2.4 15.4q-.2-.325-.125-.7t.375-.6l1.875-1.425Q4.5 12.5 4.5 12.337v-.674q0-.163.025-.338L2.65 9.9q-.3-.225-.375-.6t.125-.7l1.85-3.225q.175-.35.537-.438t.713.038l2.175.9q.275-.2.575-.375t.6-.3l.3-2.325q.05-.375.325-.625t.65-.25h3.75q.375 0 .65.25t.325.625l.3 2.325q.325.125.613.3t.562.375l2.175-.9q.35-.125.7-.025t.55.425L21.6 8.6q.2.325.125.7t-.375.6l-1.875 1.425q.025.175.025.338v.674q0 .163-.05.338l1.875 1.425q.3.225.375.6t-.125.7l-1.85 3.2q-.2.325-.563.438t-.712-.013l-2.125-.9q-.275.2-.575.375t-.6.3l-.3 2.325q-.05.375-.325.625t-.65.25Zm-1.825-6.5q1.45 0 2.475-1.025T15.55 12q0-1.45-1.025-2.475T12.05 8.5q-1.475 0-2.488 1.025T8.55 12q0 1.45 1.012 2.475T12.05 15.5Z" />
+                </svg>
               </div>
-                Settings
-                <span>&#11122;</span>
-              </a>
-            </div>
-                      <div class="item">
-              <a href="">
-                <div class="svg-container icon">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h6q.425 0 .713.288T12 4q0 .425-.288.713T11 5H5v14h6q.425 0 .713.288T12 20q0 .425-.288.713T11 21H5Zm12.175-8H10q-.425 0-.713-.288T9 12q0-.425.288-.713T10 11h7.175L15.3 9.125q-.275-.275-.275-.675t.275-.7q.275-.3.7-.313t.725.288L20.3 11.3q.3.3.3.7t-.3.7l-3.575 3.575q-.3.3-.713.288t-.712-.313q-.275-.3-.263-.713t.288-.687l1.85-1.85Z"/></svg>
+              Settings
+              <span class="svg-container icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 12H4m10 0l-4 4m4-4l-4-4m10-4v16" />
+                </svg></span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" aria-hidden="true" tabindex="-1">
+              <div class="svg-container icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h6q.425 0 .713.288T12 4q0 .425-.288.713T11 5H5v14h6q.425 0 .713.288T12 20q0 .425-.288.713T11 21H5Zm12.175-8H10q-.425 0-.713-.288T9 12q0-.425.288-.713T10 11h7.175L15.3 9.125q-.275-.275-.275-.675t.275-.7q.275-.3.7-.313t.725.288L20.3 11.3q.3.3.3.7t-.3.7l-3.575 3.575q-.3.3-.713.288t-.712-.313q-.275-.3-.263-.713t.288-.687l1.85-1.85Z" />
+                </svg>
               </div>
-                Logout
-                <span></span>
-              </a>
-            </div>
+              Logout
+              <span></span>
+            </a>
           </div>
         </div>
       </div>
-    </header>
-  
-    <!--   nav -->
-    <nav>
-      <div class="nav-container">
-        <div class="nav-inner">
-          <ul>
-            <li class="selected">
-              <a href="#">I, Trailblazer</a>
-              <span class="tag">21/21</span>
-            </li>
-            <li>
-              <a href="#">The Rail Unto the Stars</a>
-              <span class="tag">16/16</span>
-            </li>
-            <li>
-              <a href="#">Eager for Battle</a>
-              <span class="tag">96/116</span>
-            </li>
-            <li>
-              <a href="#">Vestige of Luminflux</a>
-              <span class="tag">11/12</span>
-            </li>
-            <li>
-              <a href="#">Universe in a Nutshell</a>
-              <span class="tag">57/99</span>
-            </li>
-            <li>
-              <a href="#">Glory of the Unyielding</a>
-              <span class="tag">9/12</span>
-            </li>
-            <li>
-              <a href="#">Moment of Joy</a>
-              <span class="tag">50/55</span>
-            </li>
-            <li>
-              <a href="#">The Memories We Share</a>
-              <span class="tag">120/120</span>
-            </li>
-            <li>
-              <a href="#">Fanthom the Unfathomable</a>
-              <span class="tag">42/42</span>
-            </li>
-          </ul>
-        </div>
-        <footer>
-          <div class="copyright">
-            <p>Made by <a href="https://github.com/Myntsu">Myndi</a></p>
-            <small>Copyright © <span id="copyright"></span> | All rights reserved</small>
-          </div>
-        </footer>
+    </div>
+  </header>
+
+  <!--   nav -->
+  <nav id="nav">
+    <div class="nav-container">
+      <div class="nav-inner">
+        <ul>
+          <li class="selected">
+            <a href="#">I, Trailblazer</a>
+            <span class="tag">21/21</span>
+          </li>
+          <li>
+            <a href="#">The Rail Unto the Stars</a>
+            <span class="tag">16/16</span>
+          </li>
+          <li>
+            <a href="#">Eager for Battle</a>
+            <span class="tag">96/116</span>
+          </li>
+          <li>
+            <a href="#">Vestige of Luminflux</a>
+            <span class="tag">11/12</span>
+          </li>
+          <li>
+            <a href="#">Universe in a Nutshell</a>
+            <span class="tag">57/99</span>
+          </li>
+          <li>
+            <a href="#">Glory of the Unyielding</a>
+            <span class="tag">9/12</span>
+          </li>
+          <li>
+            <a href="#">Moment of Joy</a>
+            <span class="tag">50/55</span>
+          </li>
+          <li>
+            <a href="#">The Memories We Share</a>
+            <span class="tag">120/120</span>
+          </li>
+          <li>
+            <a href="#">Fanthom the Unfathomable</a>
+            <span class="tag">42/42</span>
+          </li>
+        </ul>
       </div>
-      <aside>
-        <div class="socials">
-          <a href="https://github.com/Myntsu" target="_blank" aria-label="Github link Myntsu" class="svg-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-2 -2 24 24">
-              <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z" />
-            </svg>
-          </a>
-          <a href="https://twitter.com/myntsu" target="_blank" aria-label="X link Myntsu" class="svg-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 448 512">
-              <path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6L379.4 396h-95.6L209 298.1L123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5l78.2-89.5h47.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z" />
-            </svg>
-          </a>
-          <a href="https://discord.com/users/124421052569878528/" target="_blank" aria-label="Discord link Myntsu" class="svg-container">
+    </div>
+    <aside>
+      <div class="socials">
+        <a href="https://github.com/Myntsu" target="_blank" aria-label="Github link Myntsu" class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z" />
+          </svg>
+        </a>
+        <a href="https://twitter.com/myntsu" target="_blank" aria-label="X link Myntsu" class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6L379.4 396h-95.6L209 298.1L123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5l78.2-89.5h47.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z" />
+          </svg>
+        </a>
+        <a href="https://discord.com/users/124421052569878528/" target="_blank" aria-label="Discord link Myntsu" class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m22 24l-5.25-5l.63 2H4.5A2.5 2.5 0 0 1 2 18.5v-15A2.5 2.5 0 0 1 4.5 1h15A2.5 2.5 0 0 1 22 3.5V24M12 6.8c-2.68 0-4.56 1.15-4.56 1.15c1.03-.92 2.83-1.45 2.83-1.45l-.17-.17c-1.69.03-3.22 1.2-3.22 1.2c-1.72 3.59-1.61 6.69-1.61 6.69c1.4 1.81 3.48 1.68 3.48 1.68l.71-.9c-1.25-.27-2.04-1.38-2.04-1.38S9.3 14.9 12 14.9s4.58-1.28 4.58-1.28s-.79 1.11-2.04 1.38l.71.9s2.08.13 3.48-1.68c0 0 .11-3.1-1.61-6.69c0 0-1.53-1.17-3.22-1.2l-.17.17s1.8.53 2.83 1.45c0 0-1.88-1.15-4.56-1.15m-2.07 3.79c.65 0 1.18.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27m4.17 0c.65 0 1.17.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27Z" />
+          </svg>
+        </a>
+      </div>
+    </aside>
+    <footer>
+      <div class="copyright">
+        <p>Made by <a href="https://github.com/Myntsu" target="_blank">Myndi <span class="svg-container icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <g fill="currentColor">
+                  <path d="M5 6a1 1 0 0 1 1-1h4a1 1 0 1 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-4a1 1 0 1 0-2 0v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6zm10-3a1 1 0 1 0 0 2h2.586l-6.293 6.293a1 1 0 0 0 1.414 1.414L19 6.414V9a1 1 0 1 0 2 0V4a1 1 0 0 0-1-1h-5z" />
+                </g>
+              </svg></span></a></p>
+        <small>Copyright © <span id="copyright"></span> | All rights reserved</small>
+      </div>
+    </footer>
+  </nav>
+
+  <!--   main -->
+  <main>
+    <div class="content">
+
+      <!--       filter -->
+      <div id="filter">
+        <h2>
+          <div class="svg-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <path fill="currentColor" d="m22 24l-5.25-5l.63 2H4.5A2.5 2.5 0 0 1 2 18.5v-15A2.5 2.5 0 0 1 4.5 1h15A2.5 2.5 0 0 1 22 3.5V24M12 6.8c-2.68 0-4.56 1.15-4.56 1.15c1.03-.92 2.83-1.45 2.83-1.45l-.17-.17c-1.69.03-3.22 1.2-3.22 1.2c-1.72 3.59-1.61 6.69-1.61 6.69c1.4 1.81 3.48 1.68 3.48 1.68l.71-.9c-1.25-.27-2.04-1.38-2.04-1.38S9.3 14.9 12 14.9s4.58-1.28 4.58-1.28s-.79 1.11-2.04 1.38l.71.9s2.08.13 3.48-1.68c0 0 .11-3.1-1.61-6.69c0 0-1.53-1.17-3.22-1.2l-.17.17s1.8.53 2.83 1.45c0 0-1.88-1.15-4.56-1.15m-2.07 3.79c.65 0 1.18.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27m4.17 0c.65 0 1.17.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27Z" />
+              <path fill="currentColor" d="M10 18v-2h4v2h-4Zm-4-5v-2h12v2H6ZM3 8V6h18v2H3Z" />
             </svg>
-          </a>
+          </div>
+          Filters
+        </h2>
+
+        <div class="filter-grid">
+          <div class="version">
+            <h3>Version</h3>
+            <div class="filter-box">
+              <input id="version-1.0" type="checkbox" name="version" value="version-1.0" checked>
+              <label class="tag" for="version-1.0">1.0</label>
+              <input id="version-1.1" type="checkbox" name="version" value="version-1.1" checked>
+              <label class="tag" for="version-1.1">1.1</label>
+              <input id="version-1.2" type="checkbox" name="version" value="version-1.2" checked>
+              <label class="tag" for="version-1.2">1.2</label>
+              <input id="version-1.3" type="checkbox" name="version" value="version-1.3" checked>
+              <label class="tag" for="version-1.3">1.3</label>
+              <input id="version-1.4" type="checkbox" name="version" value="version-1.4" checked>
+              <label class="tag" for="version-1.4">1.4</label>
+            </div>
+          </div>
+
+          <div class="type">
+            <h3>Type</h3>
+            <div class="filter-box">
+              <input id="type-visible" type="checkbox" name="type" value="type-visible" checked>
+              <label class="tag" for="type-visible">Visible</label>
+              <input id="type-hidden" type="checkbox" name="type" value="type-hidden">
+              <label class="tag" for="type-hidden">Hidden</label>
+            </div>
+          </div>
+
+          <div class="state">
+          <h3>State</h3>
+          <div class="filter-box">
+            <input id="state-all" type="checkbox" name="state" value="state-all" checked>
+            <label class="tag" for="state-all">All</label>
+            <input id="state-completed" type="checkbox" name="state" value="state-completed">
+            <label class="tag" for="state-completed">Completed</label>
+            <input id="state-incompleted" type="checkbox" name="state" value="state-incompleted">
+            <label class="tag" for="state-incompleted">Incompleted</label>
+          </div>
         </div>
-      </aside>
-    </nav>
-  
-    <!--   main -->
-    <main>
-      <div class="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, aspernatur odio est cupiditate magni at enim dolorem, nulla eos aliquid eius hic distinctio consequatur porro minus sapiente pariatur neque saepe.
+        </div>  
       </div>
-    </main>
-  </div>
+
+      <!--       ach tracker -->
+      <div id="ach-tracker">
+        <h2>
+          <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+              <path fill="currentColor" d="m15.35 20l-1.95 1.925q-.575.575-1.4.575t-1.4-.575L8.65 20H6q-.825 0-1.413-.588T4 18v-2.65L2.075 13.4Q1.5 12.825 1.5 12t.575-1.4L4 8.65V6q0-.825.588-1.413T6 4h2.65l1.95-1.925Q11.175 1.5 12 1.5t1.4.575L15.35 4H18q.825 0 1.413.588T20 6v2.65l1.925 1.95q.575.575.575 1.4t-.575 1.4L20 15.35V18q0 .825-.588 1.413T18 20h-2.65ZM12 14.475l1.925 1.15q.275.175.537-.012t.188-.513l-.5-2.175l1.7-1.475q.25-.225.15-.537t-.45-.338l-2.225-.175l-.875-2.075q-.125-.3-.45-.3t-.45.3l-.875 2.075l-2.225.175q-.35.025-.45.338t.15.537l1.7 1.475l-.5 2.175q-.075.325.188.513t.537.012L12 14.475Z" />
+            </svg>
+          </div>
+          Tracker
+        </h2>
+        <div>
+          <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="A porcine football team">
+            <label for="search-bar">
+              <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z" />
+                </svg>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
