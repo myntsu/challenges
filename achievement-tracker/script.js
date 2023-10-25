@@ -1,5 +1,7 @@
+// copyright 
 document.querySelector("#copyright").textContent = new Date().getFullYear().toString();
 
+// listener for the dropdown
 document.addEventListener("click", function(e) {
   const button = e.target.closest("[data-dropdown-button]");
   let currentDropdown;
@@ -23,6 +25,7 @@ document.addEventListener("click", function(e) {
   }
 });
 
+// dropdown function
 function toggleDropdown(dropdown) {
   const button = dropdown.querySelector("[data-dropdown-button]");
   const isActive = dropdown.classList.toggle("active");
@@ -46,14 +49,20 @@ function toggleDropdown(dropdown) {
   }
 }
 
-// Get the button and nav elements
-const hamburger = document.querySelector('.hamburger-menu');
-const nav = document.querySelector('nav');
+// hamburger menu toggle
+window.addEventListener('load', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const nav = document.querySelector('nav');
 
-// Attach click event to the button
-hamburger.addEventListener('click', () => {
-    // Toggle aria-expanded attribute and visible class
-    const isExpanded = nav.getAttribute('aria-expanded') === 'true';
-    nav.setAttribute('aria-expanded', !isExpanded);
-    nav.classList.toggle('visible');
+    if (window.innerWidth <= 870) {
+        nav.setAttribute('aria-expanded', 'true');
+    } else {
+        nav.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', () => {
+        const isExpanded = nav.getAttribute('aria-expanded') === 'true';
+        nav.setAttribute('aria-expanded', !isExpanded);
+        nav.classList.toggle('visible');
+    });
 });
