@@ -507,6 +507,7 @@ main #ach-tracker .search-bar label .svg-container {
   width: 24px;
 }
 
+/* stupid vs code */
 @container (max-width: 600px) {
   main .content {
     align-content: flex-start;
