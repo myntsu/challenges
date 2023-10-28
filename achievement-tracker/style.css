@@ -506,8 +506,45 @@ main #ach-tracker .search-bar label:is(:active) {
 main #ach-tracker .search-bar label .svg-container {
   width: 24px;
 }
+main #ach-tracker .achievement-container .filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main #ach-tracker .achievement-container .achievement {
+  display: flex;
+  gap: 1rem;
+}
+main #ach-tracker .achievement-container .tag-list {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(25px, 100%));
+  gap: 1rem;
+}
+main #ach-tracker .achievement-container .tag-list .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  padding-inline: 0.25rem;
+  color: hsl(var(--background));
+  background-color: hsl(var(--important-900));
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  user-select: none;
+  scale: 0.75;
+}
+main #ach-tracker .achievement-container .tag-list .tag:is(:hover) {
+  opacity: 0.9;
+}
+main #ach-tracker .achievement-container .tag-list .tag svg, main #ach-tracker .achievement-container .tag-list .tag .svg-container {
+  width: 20px;
+  height: 20px;
+}
+main #ach-tracker .achievement-container .information h3, main #ach-tracker .achievement-container .information p {
+  margin: 0;
+}
 
-/* stupid vs code */
 @container (max-width: 600px) {
   main .content {
     align-content: flex-start;
