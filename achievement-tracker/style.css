@@ -19,6 +19,9 @@
   --important-500: 49 85% 77%;
   --important-700: 49 85% 83%;
   --important-900: 49 85% 89%;
+  --tag-version: 0 0% 70%;
+  --tag-krystal: 200 50% 70%;
+  --tag-type: 0 50% 70%;
 }
 
 ::-webkit-scrollbar {
@@ -506,6 +509,10 @@ main #ach-tracker .search-bar label:is(:active) {
 main #ach-tracker .search-bar label .svg-container {
   width: 24px;
 }
+main #ach-tracker .achievement-container {
+  container-type: inline-size;
+  container-name: achievement;
+}
 main #ach-tracker .achievement-container .filter {
   display: flex;
   justify-content: flex-end;
@@ -514,35 +521,66 @@ main #ach-tracker .achievement-container .filter {
 main #ach-tracker .achievement-container .achievement {
   display: flex;
   gap: 1rem;
+  padding: 0.75rem;
+  color: hsl(var(--text));
+  background-color: hsl(var(--dark-500));
+  border-radius: 0.25rem;
 }
-main #ach-tracker .achievement-container .tag-list {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(25px, 100%));
+main #ach-tracker .achievement-container .achievement:is(:hover) {
+  outline: 2px solid hsl(var(--text)/0.5);
+  outline-offset: 3px;
+}
+main #ach-tracker .achievement-container .achievement > div {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
+main #ach-tracker .achievement-container .achievement:has(.checkbox-state:checked) {
+  color: hsl(var(--background));
+  background-color: hsl(var(--important-500));
+}
+main #ach-tracker .achievement-container .tag-list {
+  display: flex;
+  gap: 0.5rem;
+}
 main #ach-tracker .achievement-container .tag-list .tag {
+  flex: 0 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.1rem;
-  padding-inline: 0.25rem;
+  padding: 0.1rem 0.25rem;
+  padding-inline-start: 0.5rem;
   color: hsl(var(--background));
   background-color: hsl(var(--important-900));
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
+  border: 1px solid hsl(var(--background)/0.5);
+  font-size: 0.75rem;
   font-weight: 700;
   user-select: none;
-  scale: 0.75;
 }
-main #ach-tracker .achievement-container .tag-list .tag:is(:hover) {
-  opacity: 0.9;
+main #ach-tracker .achievement-container .tag-list .tag:is(.version) {
+  border-left: 4px solid hsl(var(--tag-version));
 }
-main #ach-tracker .achievement-container .tag-list .tag svg, main #ach-tracker .achievement-container .tag-list .tag .svg-container {
-  width: 20px;
-  height: 20px;
+main #ach-tracker .achievement-container .tag-list .tag:is(.krystal) {
+  border-left: 4px solid hsl(var(--tag-krystal));
+}
+main #ach-tracker .achievement-container .tag-list .tag:is(.type) {
+  border-left: 4px solid hsl(var(--tag-type));
+}
+main #ach-tracker .achievement-container .tag-list .tag img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: cover;
 }
 main #ach-tracker .achievement-container .information h3, main #ach-tracker .achievement-container .information p {
   margin: 0;
+}
+main #ach-tracker .achievement-container .information p {
+  opacity: 0.9;
+}
+main #ach-tracker .achievement-container aside {
+  margin-inline-start: auto;
 }
 
 @container (max-width: 600px) {
@@ -554,7 +592,7 @@ main #ach-tracker .achievement-container .information h3, main #ach-tracker .ach
   main #filter {
     width: 100%;
     height: auto;
-    background-color: hsl(var(--dark-100)/0.5);
+    background-color: hsl(var(--dark-100));
   }
   main #filter .filter-grid {
     display: grid;
@@ -574,5 +612,10 @@ main #ach-tracker .achievement-container .information h3, main #ach-tracker .ach
   }
   main #ach-tracker {
     margin-block-end: auto;
+  }
+}
+@container achievement (max-width: 500px) {
+  .achievement .information {
+    width: 100%;
   }
 }
