@@ -1,7 +1,5 @@
-// copyright 
 document.querySelector("#copyright").textContent = new Date().getFullYear().toString();
 
-// listener for the dropdown
 document.addEventListener("click", function(e) {
   const button = e.target.closest("[data-dropdown-button]");
   let currentDropdown;
@@ -25,7 +23,6 @@ document.addEventListener("click", function(e) {
   }
 });
 
-// dropdown function
 function toggleDropdown(dropdown) {
   const button = dropdown.querySelector("[data-dropdown-button]");
   const isActive = dropdown.classList.toggle("active");
@@ -49,20 +46,34 @@ function toggleDropdown(dropdown) {
   }
 }
 
-// hamburger menu toggle
-window.addEventListener('load', () => {
-    const hamburger = document.querySelector('.hamburger-menu');
-    const nav = document.querySelector('nav');
+const hamburger = document.querySelector('.hamburger-menu');
+const nav = document.querySelector('nav');
 
-    if (window.innerWidth <= 870) {
-        nav.setAttribute('aria-expanded', 'true');
-    } else {
-        nav.setAttribute('aria-expanded', 'false');
-    }
+hamburger.addEventListener('click', () => {
+    const isExpanded = nav.getAttribute('aria-expanded') === 'true';
+    nav.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('visible');
+});
 
-    hamburger.addEventListener('click', () => {
-        const isExpanded = nav.getAttribute('aria-expanded') === 'true';
-        nav.setAttribute('aria-expanded', !isExpanded);
-        nav.classList.toggle('visible');
-    });
+let tags = document.querySelectorAll('.tag-list .tag');
+
+tags.forEach(tag => {
+  let dataTag = tag.getAttribute('data-tag');
+  let textContent = tag.textContent.trim();
+
+  switch(dataTag) {
+    case 'version':
+      let versionNumber = textContent.replace('V', '');
+      tag.setAttribute('title', `Version ${versionNumber}`);
+      break;
+    case 'krystal':
+      let krystalNumber = textContent.replace('Krystal', '').trim();
+      tag.setAttribute('title', `${krystalNumber} krystals`);
+      break;
+    case 'type':
+      if(tag.hasAttribute('data-tag-hidden')) {
+        tag.setAttribute('title', 'This is a secret achievement');
+      }
+      break;
+  }
 });
