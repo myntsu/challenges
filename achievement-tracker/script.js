@@ -55,6 +55,7 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('visible');
 });
 
+// adding titles to tags
 let tags = document.querySelectorAll('.tag-list .tag');
 
 tags.forEach(tag => {
