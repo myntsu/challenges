@@ -1,6 +1,6 @@
 const jsonData = [
     { "tag": "New", "imageSrc": "https://picsum.photos/id/238/120/135", "productName": "Christmas Tree", "productPrice": "$50" },
-    { "tag": "-23%", "imageSrc": "https://picsum.photos/id/239/120/135", "productName": "Christmas Lights", "productPrice": "$30" },
+    { "tag": "Sale", "imageSrc": "https://picsum.photos/id/239/120/135", "productName": "Christmas Lights", "productPrice": "$30", "discount": "$40" },
     { "tag": "Hot", "imageSrc": "https://picsum.photos/id/240/120/135", "productName": "Christmas Ornaments", "productPrice": "$20" },
     { "tag": "", "imageSrc": "https://picsum.photos/id/241/120/135", "productName": "Christmas Wreath", "productPrice": "$35" },
     { "tag": "", "imageSrc": "https://picsum.photos/id/242/120/135", "productName": "Christmas Stockings", "productPrice": "$25" },
@@ -21,7 +21,7 @@ products.forEach((product, index) => {
     const tag = product.querySelector('.tag');
     tag.textContent = data.tag;
     if (data.tag) {
-        tag.classList.add(data.tag);
+        tag.classList.add(data.tag.toLowerCase());
     }
 
     const image = product.querySelector('.image img');
@@ -32,4 +32,31 @@ products.forEach((product, index) => {
 
     const productPrice = product.querySelector('[data-product-price]');
     productPrice.textContent = data.productPrice;
+
+    if (data.tag === 'Sale' && data.discount) {
+        const price = parseFloat(data.productPrice.replace('$', ''));
+        const discount = parseFloat(data.discount.replace('$', ''));
+        const percentage = Math.round(((price - discount) / price) * 100);
+        tag.textContent = `${percentage}%`;
+
+        const productDiscount = product.querySelector('[data-product-discount]');
+        if (productDiscount) {
+            productDiscount.textContent = `${data.discount}`;
+        }
+    }
+});
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+addToCartButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const buttonText = button.textContent.trim();
+        if (buttonText === 'Add to cart') {
+            button.textContent = 'Added to cart';
+            button.classList.add('visible');
+        } else {
+            button.textContent = 'Add to cart';
+            button.classList.remove('visible');
+        }
+    });
 });
