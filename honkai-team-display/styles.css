@@ -55,6 +55,8 @@ body {
 
   width: 110px;
   aspect-ratio: 1;
+  
+  position: relative;
 }
 
 .card .img-container.five-star {
@@ -91,7 +93,7 @@ body {
 }
 
 .info-container.imaginary {
-  background: hsl(60 35% 35% / .8);
+  background: hsl(45 40% 50% / .8);
 }
 
 .info-container.quantum {
@@ -151,5 +153,25 @@ body {
 }
 
 .eidolon, .signature {
-  
+  --eidolong-signature-bg: hsl(0 0% 100%);
+  --eidolon-left: 5px;
+  position: absolute;
+  top: var(--eidolon-left);
+  min-width: 20px;
+  min-height: 10px;
+  background-color: var(--eidolong-signature-bg);
+  color: hsl(0 0% 100%);
+  border-radius: .15rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.eidolon {
+  --eidolong-signature-bg: hsl(340 70% 50%);
+  left: var(--eidolon-left);
+}
+
+.signature {
+  --eidolong-signature-bg: hsl(230 70% 50%);
+  left: calc(var(--eidolon-left) + 20%)
 }
