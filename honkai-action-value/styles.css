@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: 0 0% 91%;
+  --background: 0 0% 5%;
+
+  --dark-100: 0 0% 11%;
+  --dark-300: 0 0% 17%;
+  --dark-500: 0 0% 23%;
+  --dark-700: 0 0% 29%;
+  --dark-900: 0 0% 35%;
+
+  --important: 49 85% 65%;
+
+  --important-100: 49 85% 65%;
+  --important-300: 49 85% 71%;
+  --important-500: 49 85% 77%;
+  --important-700: 49 85% 83%;
+  --important-900: 49 85% 89%;
+
+  --tag-version: 0 0% 70%;
+  --tag-krystal: 200 50% 70%;
+  --tag-type: 0 50% 70%;
+  --tag-checked: var(--important);
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: transparent;
+}
+
+:hover::-webkit-scrollbar {
+  background-color: hsl(var(--dark-300));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--text) / 0.7);
+}
+
+::selection {
+  background-color: hsl(var(--text));
+  color: hsl(var(--background));
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: -moz-hidden-unscrollable;
+  overflow-x: clip;
+  scrollbar-gutter: auto;
+}
+
+body {
+  margin: 0;
+
+  color: hsl(var(--text));
+  background: hsl(var(--background));
+  font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.important {
+  color: hsl(var(--important));
+  font-weight: 700;
+}
+
+main {
+  grid-area: main;
+
+  container-type: inline-size;
+
+  background-image: url(https://cdn.discordapp.com/attachments/314296024833196036/1164681617789431938/latest.png?ex=660f2048&is=65fcab48&hm=a19c7962b77e38a201aab658dc1c29eb7bda4fa58e68c05708235a984292d32a&);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: fixed;
+  overflow-y: scroll;
+  
+  height: 100%;
+}
+
+.content {
+  min-height: 100%;
+  padding: 1rem;
+  z-index: 0;
+  background-color: hsl(var(--background) / 0.9);
+}
+
+.content > :not(:last-child) {
+  margin-block-end: 1rem;
+}
