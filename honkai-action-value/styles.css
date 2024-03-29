@@ -109,8 +109,15 @@ main {
   background-color: hsl(var(--background) / 0.9);
 }
 
+.content form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .content > :not(:last-child) {
   margin-block-end: 1rem;
 }
 
-doing the thing
+.form-section {
+  flex: 1 0 50%;
+}
