@@ -1,19 +1,19 @@
 document.getElementById('submit').addEventListener('click', () => {
-  // Get input values
+  // Extracting input value
   const baseSpeed = Number(document.getElementById('character').value);
   const flatSpeed = Number(document.getElementById('flatSpeed').value);
   const percentSpeed = Number(document.getElementById('percentSpeed').value) / 100;
   const totalCycles = Number(document.getElementById('cycles').value);
 
-  // Calculate speed and action value
+  // Calculating speed/action value
   let totalSpeed = baseSpeed * (1 + percentSpeed) + flatSpeed;
   let actionValue = 10000 / totalSpeed;
 
-  // Initialize result string
+  // Initializing
   let result = `Total Speed: ${totalSpeed}<br>`;
   result += `Action Value: ${actionValue}<br>`;
 
-  // Calculate actions for each cycle
+  // Calculating AV per cycle
   let remainder = 0;
   for (let i = 0; i <= totalCycles; i++) {
     let cycleValue = (i === 0) ? 150 : 100;
@@ -27,7 +27,7 @@ document.getElementById('submit').addEventListener('click', () => {
       remainder -= bonusActions;
     }
 
-    // If there are 2 or more actions, consider one as a base action and the rest as bonus actions
+    // If there is more than 1 action, consider it bonus
     if (baseActions >= 2) {
       bonusActions += baseActions - 1;
       baseActions = 1;
@@ -37,6 +37,5 @@ document.getElementById('submit').addEventListener('click', () => {
     result += `Cycle ${i}: ${totalActionsCycle} actions (including ${bonusActions} bonus actions)<br>`;
   }
 
-  // Display result
   document.getElementById('result').innerHTML = result;
 });
