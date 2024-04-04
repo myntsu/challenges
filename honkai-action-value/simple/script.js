@@ -4,11 +4,6 @@ document.getElementById('submit').addEventListener('click', () => {
   const flatSpeed = Number(document.getElementById('flatSpeed').value);
   const percentSpeed = Number(document.getElementById('percentSpeed').value) / 100;
   const totalCycles = Number(document.getElementById('cycles').value);
-  const buffCycle = Number(document.getElementById('buffCycle').value);
-  const speedBuff = Number(document.getElementById('speedBuff').value) / 100;
-  const flatSpeedBuff = Number(document.getElementById('flatSpeedBuff').value);
-  const buffEndCycle = Number(document.getElementById('buffEndCycle').value);
-  const advanceForward = Number(document.getElementById('advanceForward').value) / 100;
 
   // Calculate speed and action value
   let totalSpeed = baseSpeed * (1 + percentSpeed) + flatSpeed;
@@ -40,20 +35,6 @@ document.getElementById('submit').addEventListener('click', () => {
 
     let totalActionsCycle = baseActions + bonusActions;
     result += `Cycle ${i}: ${totalActionsCycle} actions (including ${bonusActions} bonus actions)<br>`;
-
-    // Apply speed buff or advance forward
-    if (i === buffCycle && (speedBuff > 0 || advanceForward > 0)) {
-      totalSpeed *= (1 + speedBuff);
-      totalSpeed += flatSpeedBuff;
-      actionValue = (10000 / totalSpeed) - (10000 * advanceForward / totalSpeed);
-      result += `Buff applied. New Speed: ${totalSpeed}, New Action Value: ${actionValue}<br>`;
-    }
-
-    // End speed buff
-    if (i === buffEndCycle) {
-      totalSpeed = baseSpeed * (1 + percentSpeed) + flatSpeed;
-      actionValue = 10000 / totalSpeed;
-    }
   }
 
   // Display result
