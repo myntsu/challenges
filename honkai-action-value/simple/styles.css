@@ -55,8 +55,6 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
-  overflow-x: -moz-hidden-unscrollable;
   overflow-x: clip;
   scrollbar-gutter: auto;
 }
@@ -88,11 +86,10 @@ button {
 }
 
 main {
-  grid-area: main;
+  display: grid;
+  place-items: center;
 
-  container-type: inline-size;
-
-  background-image: url(https://cdn.discordapp.com/attachments/314296024833196036/1164681617789431938/latest.png?ex=66219548&is=660f2048&hm=7cddfabf8f4d9247a4f3eda9c9c455f56377308d19f3b972e3ad66adc0d4bb69&);
+  background-image: url(https://cdn.discordapp.com/attachments/314296024833196036/1164681617789431938/latest.png?ex=660f2048&is=65fcab48&hm=a19c7962b77e38a201aab658dc1c29eb7bda4fa58e68c05708235a984292d32a&);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,6 +100,7 @@ main {
 }
 
 .content {
+  max-width: 600px;
   min-height: 100%;
   padding: 1rem;
   z-index: 0;
@@ -119,5 +117,61 @@ main {
 }
 
 .form-section {
-  flex: 1 0 50%;
+  flex: 1 0 100%;
+}
+
+.form-section label {
+  position: relative;
+  display: inline-block;
+  color: hsl(var(--dark-900));
+  translate: .5rem 1.65rem;
+  margin-block-end: .25rem;
+}
+
+.form-section :has(input:focus-visible) label {
+  translate: 0 0;
+  transition: translate 150ms linear;
+}
+
+.form-section input {
+  width: 100%;
+  height: 3ch;
+  
+  margin-block-end: .75rem;
+  padding-inline-start: .5rem;
+  border: 0;
+  border-radius: .25rem;
+  
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.form-section input:is(:focus, :focus-visible) {
+  outline: none;
+  outline: 3px solid hsl(var(--important-100));
+  outline-offset: 3px;
+}
+
+.form-section label:is(.focused) {
+  translate: 0 0;
+  transition: translate 150ms linear;
+}
+
+#submit {
+  margin-inline: auto;
+  padding: .5rem 1rem;
+  background: hsl(var(--important));
+  border: 0;
+  border-radius: .25rem;
+  box-shadow: 2px 2px 0 hsl(var(--text));
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#submit:is(:active) {
+  translate: 2px 2px;
+  box-shadow: none;
 }
