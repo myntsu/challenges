@@ -39,3 +39,28 @@ document.getElementById('submit').addEventListener('click', () => {
 
   document.getElementById('result').innerHTML = result;
 });
+
+let inputs = document.querySelectorAll('input');
+
+// Add event listeners to each input field
+inputs.forEach(input => {
+  // Get the sibling label of the input
+  let label = input.previousElementSibling;
+
+  // Add 'focused' class when the input field is focused
+  input.addEventListener('focus', function() {
+    label.classList.add('focused');
+  });
+
+  // Remove 'focused' class when the input field loses focus, unless it has content
+  input.addEventListener('blur', function() {
+    if (this.value === '') {
+      label.classList.remove('focused');
+    }
+  });
+
+  // Add 'focused' class if the input field has content when the page loads
+  if (input.value !== '') {
+    label.classList.add('focused');
+  }
+});
