@@ -8,6 +8,24 @@
       </svg>
     </button>
     <h1>Moon Jelly</h1>
+
+    <div class="settings" id="settings">
+      <button id="openSettings" aria-controls="settingsDialog" aria-pressed="false" aria-label="Open settings">Open Settings</button>
+    </div>
+
+    <dialog id="settingsDialog">
+      <form id="settingsForm">
+        <button type="button" id="toggleMode">Dark-Light mode</button>
+        <button type="button" id="closeSettings">X</button>
+        <button type="submit" id="applySettings">Apply</button>
+      </form>
+    </dialog>
+
+    <dialog id="confirmDialog">
+      <p>You haven't applied the changes. Are you sure you want to continue?</p>
+      <button id="confirmYes">Yes</button>
+      <button id="confirmNo">No</button>
+    </dialog>
   </header>
 
   <!--   nav -->
@@ -27,17 +45,21 @@
           </li>
           <li>
             <a href="#">Contact</a>
-          </li>          
+          </li>
         </ul>
       </div>
     </div>
     <aside>
       <div class="socials">
         <a href="https://www.youtube.com/@MoonJelly" target="_blank" aria-label="YouTube link Moon Jelly" class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zM9 9v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zM9 9v6a1 1 0 0 0 1.514.857l5-3a1 1 0 0 0 0-1.714l-5-3A1 1 0 0 0 9 9" />
+          </svg>
         </a>
         <a href="https://www.patreon.com/moonjellych" target="_blank" aria-label="Patreon link Moon Jelly" class="svg-container">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M232 93.17c0 41-29.69 52.47-53.55 61.67c-8.41 3.24-16.35 6.3-22.21 10.28c-11.39 7.72-18.59 21.78-25.55 35.38c-9.94 19.42-20.23 39.5-43.17 39.5c-12.91 0-24.61-11.64-33.85-33.66s-14.31-51-13.61-77.45c1.08-40.65 14.58-62.68 25.7-74c14.95-15.2 35.24-25.3 58.68-29.2c21.79-3.62 44.14-1.38 62.93 6.3C215.73 43.6 232 65.9 232 93.17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+            <path fill="currentColor" d="M232 93.17c0 41-29.69 52.47-53.55 61.67c-8.41 3.24-16.35 6.3-22.21 10.28c-11.39 7.72-18.59 21.78-25.55 35.38c-9.94 19.42-20.23 39.5-43.17 39.5c-12.91 0-24.61-11.64-33.85-33.66s-14.31-51-13.61-77.45c1.08-40.65 14.58-62.68 25.7-74c14.95-15.2 35.24-25.3 58.68-29.2c21.79-3.62 44.14-1.38 62.93 6.3C215.73 43.6 232 65.9 232 93.17" />
+          </svg>
         </a>
         <a href="https://twitter.com/moonjelly0" target="_blank" aria-label="Twitter/X link Moon Jelly" class="svg-container">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 448 512">

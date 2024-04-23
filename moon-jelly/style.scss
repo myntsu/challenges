@@ -23,7 +23,7 @@
   --important-500: 49 85% 77%;
   --important-700: 49 85% 83%;
   --important-900: 49 85% 89%;
-  
+
   --success: 100 25% 50%;
 
   --tag-version: 0 0% 70%;
@@ -174,45 +174,19 @@ header {
 
   padding: 1rem;
 
-  @media (max-width: 600px) {
-    .user-profile {
-      padding-inline: 1rem !important;
-      padding-block: 1rem !important;
-      border-radius: 50% !important;
-
-      p {
-        display: none;
-      }
-    }
-  }
-
   h1 {
-    font-size: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+    font-size: clamp(1.25rem, 0.9615rem + 0.9231vw, 2rem);
   }
 
-  .user-profile {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem 1rem;
-
-    color: inherit;
-    background-color: hsl(var(--success));
+  dialog {
+    width: 300px;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 5px;
+    padding: 20px;
+  }
 
-    cursor: pointer;
-
-    &:is(:hover, :focus-visible) {
-      background-color: hsl(var(--dark-300));
-    }
-
-    p {
-      font-weight: 700;
-    }
+  .settings-button {
+    margin: 20px;
   }
 }
 
