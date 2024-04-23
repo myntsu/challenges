@@ -193,25 +193,6 @@ header {
     font-size: clamp(1rem, 0.6rem + 1.6vw, 2rem);
   }
 
-  .dropdown {
-    position: relative;
-    margin-inline-start: auto;
-    z-index: 99999;
-
-    &:is(.active) {
-      .user-profile {
-        background-color: hsl(var(--dark-300));
-        outline: 1px solid hsl(var(--important-900) / 0.5);
-      }
-
-      .user-profile + .dropdown-menu {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-    }
-  }
-
   .user-profile {
     display: flex;
     align-items: center;
@@ -279,6 +260,7 @@ nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
 
       white-space: nowrap;
 
@@ -316,7 +298,7 @@ nav {
       justify-content: center;
       align-items: center;
 
-      width: 5.5rem;
+      width: 5rem;
       margin-inline-end: 0.5rem;
       padding-block: 0.25rem;
 
