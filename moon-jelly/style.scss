@@ -92,9 +92,6 @@ button {
   width: 40px;
   aspect-ratio: 1;
 
-  svg {
-  }
-
   &:is(button) {
     color: hsl(var(--text));
   }
