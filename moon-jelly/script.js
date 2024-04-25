@@ -49,7 +49,6 @@ let tempSettings = {
   isDarkMode: true
 };
 
-// Try to load settings from local storage
 if (localStorage.getItem("settings")) {
   tempSettings = JSON.parse(localStorage.getItem("settings"));
   applySettings(tempSettings);
@@ -106,11 +105,7 @@ window.addEventListener("click", function (event) {
 
 function applySettings(settings) {
   document.documentElement.style.setProperty(
-    "--text",
-    settings.isDarkMode ? "0 0% 91%" : "0% 6%"
-  );
-  document.documentElement.style.setProperty(
     "--background",
-    settings.isDarkMode ? "0% 6%" : "0 0% 91%"
+    settings.isDarkMode ? "0 0% 6%" : "0 0% 23%"
   );
 }
