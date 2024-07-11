@@ -131,3 +131,7 @@
   .c {
     display: block;
   }
+
+  .d {
+    display: flex;
+  }
