@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: 0 0% 91%;
+  --background: 260 20% 25%;
+  
+  --light: 0 0% 91%;
+
+  --important: 260 20% 15%;
+  --important-silence: 260 12% 15%;
+
+  --secondary: 280 40% 35%;
+  --secondary-silence: ;
+  --secondary-highlight: 280 40% 85%;
+  
+  --success: 200 80% 60%;
+  --failure: 0 80% 60%;
+
+  --four-star: linear-gradient(180deg, #343659, #8a5fcc 53%);
+  --five-star: linear-gradient(180deg, #885550, #c9a36a 53%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+  margin: 0;
+  color: hsl(var(--text));
+  background: hsl(var(--background));
+  font-family: "Open Sans", sans-serif;
+  
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 800px;
+
+  padding: 1rem;
+
+  border: 1px solid red;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+img {
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  button {
+    flex: 1;
+    
+    padding: 0.5rem 1rem;
+    color: hsl(var(--light) / 0.5);
+    background-color: hsl(var(--important-silence));
+    border: none;
+    border-radius: 0.25rem;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: inherit;
+    text-wrap: nowrap;
+
+    cursor: pointer;
+
+    &:is(.active) {
+      color: hsl(var(--light));
+      background-color: hsl(var(--important));
+      box-shadow: 0 0 15px 1px hsl(var(--secondary-highlight) / 0.25);
+      outline: 1px solid hsl(var(--light) / 0.3);
+      outline-offset: -3px;
+    }
+
+    &:is(:hover, :focus-visible):not(.active) {
+      color: hsl(var(--light) / 0.9);
+      box-shadow: 0 0 10px 4px hsl(var(--secondary-highlight) / 0.1);
+      transition: all 180ms linear;
+    }
+  }
+}
+
+.warp-category {
+  --button-size: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--button-size), 1fr));
+  gap: 0.5rem;
+  width: 100%;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    color: hsl(var(--light) / .8);
+    background-color: hsl(var(--secondary));
+    border: none;
+    border-radius: 0.25rem;
+
+    overflow: hidden;
+
+    font-size: 3rem;
+    font-family: inherit;
+    cursor: pointer;
+
+    position: relative;
+
+    &:is(.four-star) {
+      background: var(--four-star);
+    }
+
+    &:is(.five-star) {
+      background: var(--five-star);
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: hsl(0 0% 8% / .4);
+      isolation: isolate;
+    }
+    
+    &[data-wr="Won"]::before {
+      background-color: hsl(var(--success) / .2);
+    }
+    
+    &[data-wr="Lost"]::before {
+      background-color: hsl(var(--failure) / .2);
+    }
+
+
+    &[data-warp-info]::after {
+      content: attr(data-warp-info);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      padding: 0.25rem;
+
+      color: hsl(var(--light) / 0.9);
+      background-color: hsl(0 0% 8% / 0.7);
+
+      font-size: 0.75rem;
+      font-weight: 900;
+  
+      transition: opacity 150ms linear;
+    }
+         
+    &:is(:hover, :focus-visible, .active) {
+      box-shadow: 0 0 15px 1px hsl(var(--secondary-highlight) / 0.25);
+    }
+    
+    &:is(:hover, :focus-visible, .active)::before {
+      background-color: unset;
+    }
+
+    &:is(:hover, :focus-visible, .active)::after{
+      opacity: 0;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+#warp-information { 
+  width: 100%;
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    .wrapper__image {
+      background: var(--five-star);
+      border: 1px solid hsl(var(--light) / .5);
+      border-radius: .5rem;
+      
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+    
+    .wrapper__information {
+      flex: 1;
+      display: flex;
+      
+      & > * {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      & > :nth-of-type(1) {
+        flex: 1;
+        align-items: flex-start;
+        
+        h3:last-of-type {
+          margin-block-end: 1rem;
+        }
+        
+        & > * {
+          margin-block-end: .5rem;
+        }
+      }
+      
+      & > :nth-of-type(2) {
+        background: green;
+      }
+    }
+  }
+}
+
+
