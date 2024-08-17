@@ -50,8 +50,6 @@ main {
   max-width: 800px;
 
   padding: 1rem;
-
-  border: 1px solid red;
 }
 
 @for $i from 1 through 6 {
@@ -69,8 +67,31 @@ img {
   display: block;
 }
 
+svg {
+  width: 24px;
+  height: 24px;
+}
+
 .bold {
   font-weight: 900;
+}
+
+:is(p, span) {
+  &:is(.success) {
+    color: hsl(var(--success) / 0.7);
+  }
+
+  &:is(.failure) {
+    color: hsl(var(--failure) / 0.7);
+  }
+}
+
+.arrow-up {
+  color: hsl(var(--success) / 0.7);
+}
+
+.arrow-down {
+  color: hsl(var(--failure) / 0.7);
 }
 
 nav {
@@ -117,6 +138,9 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(var(--button-size), 1fr));
   gap: 0.5rem;
   width: 100%;
+  background: hsl(var(--important) / 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
 
   button {
     display: flex;
@@ -210,15 +234,38 @@ nav {
       border: 1px solid hsl(var(--light) / 0.5);
       border-radius: 0.5rem;
 
+      position: relative;
+
       img {
         width: 150px;
         height: auto;
+      }
+
+      &[data-warp-info]::after {
+        content: attr(data-warp-info);
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        padding: 1rem;
+
+        color: hsl(var(--light) / 0.9);
+        background-color: hsl(0 0% 8% / 0.7);
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+        font-weight: 900;
+        text-align: center;
+
+        transition: opacity 150ms linear;
       }
     }
 
     .wrapper__information {
       flex: 1;
       display: flex;
+      gap: 1rem;
 
       & > * {
         display: flex;
@@ -227,40 +274,53 @@ nav {
         align-items: center;
       }
 
-      & > :nth-of-type(1) {
+      & > .ratios {
         flex: 1;
         padding: 1rem;
+        background: hsl(var(--important) / 0.2);
+        border-radius: 0.5rem;
 
         h3:last-of-type {
           margin-block-end: 1rem;
         }
 
-        & > * {
+        h3 {
           width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          flex-wrap: wrap;
           margin-block-end: 0.5rem;
-          
+
           span {
             display: inline-flex;
             align-items: center;
-            gap: .5rem;
+            gap: 0.5rem;
           }
-          
+
           .information__span {
+            flex: 1;
             position: relative;
+            color: hsl(var(--light) / 0.8);
           }
-          
+
           .information__span::after {
             content: "";
-            width: 100%;
-            flex: 1 0 100%;
-            border-bottom: 1px dotted white;
+            flex: 1;
+            border-bottom: 1px dotted hsl(var(--light) / 0.5);
             margin-left: 0.5rem;
             margin-right: 0.5rem;
             height: 1px;
           }
+        }
+
+        .average-pull-global {
+          width: 100%;
+          padding: 1rem;
+          color: hsl(var(--light) / 0.7);
+          background-color: hsl(var(--important) / 0.3);
+          border-radius: 0.5rem;
+          text-align: center;
         }
 
         :is(.arrow-up, .arrow-down) {
@@ -271,21 +331,13 @@ nav {
 
         :is(.arrow-up, .arrow-down) svg {
           width: 24px;
-          heiht: 24px;
-        }
-
-        .arrow-up {
-          color: hsl(var(--success) / 0.7);
-        }
-
-        .arrow-down {
-          color: hsl(var(--failure) / 0.7);
+          height: 24px;
         }
       }
 
-      & > :nth-of-type(2) {
+      & > .win-rate {
         display: grid;
-        place-content: center;
+        // place-: center;
         gap: 1rem;
         padding: 1rem;
         background: hsl(var(--important) / 0.2);
@@ -294,7 +346,7 @@ nav {
 
         .win-rate-display {
           padding: 0.5rem;
-          border: 1px solid hsl(var(--light) / 0.5);
+          border: 1px solid hsl(var(--light) / 0.2);
           border-radius: 0.25rem;
           font-weight: 900;
 
@@ -306,10 +358,36 @@ nav {
           }
         }
 
-        p {
-          opacity: 0.5;
-          font-size: 0.875rem;
-          color: hsl(var(--failure));
+        .average-pity {
+          display: grid;
+          gap: 0.5rem;
+          font-weight: 700;
+
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            color: hsl(var(--light) / 0.7);
+            font-size: 0.875rem;
+          }
+
+          .average-pity__indicator {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+
+            > span {
+              display: flex;
+              align-items: center;
+            }
+          }
+          
+          .average-pity__bottom {
+            padding: 1rem;
+            background-color: hsl(var(--important) / .3);
+            border-radius: .5rem;
+          }
         }
       }
     }
