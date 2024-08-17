@@ -10,7 +10,9 @@
   <!--   Warp category -->
   <div class="warp-category">
     <button class="five-star">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20z" />
+      </svg>
     </button>
     <button class="five-star active" data-warp-info="E0 - Lost" data-wr="Lost"><img src="https://www.prydwen.gg/static/a4e021ab30703829c614fbb302e04961/60b4d/yunli_sm.webp" alt=""></button>
     <button class="four-star"><img src="https://www.prydwen.gg/static/e023b80838d8304b3dfbb7622e1a00ab/60b4d/m7alt_sm.webp" alt=""></button>
@@ -35,18 +37,26 @@
       <!--       Character information -->
       <div class="wrapper__information">
         <div>
-          <h3>Total warps: <span data-total-warps>157</span></h3>
-          <h3>Jade used: <span data-jade-used>25,120</span></h3>
-          <p>5* obtained: <span data-five-obtained>2</span></p>
-          <p>4* obtained: <span data-four-obtained>19</span></p>
+          <h3><span class="information__span">Total warps:</span> <span data-total-warps>157 <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11 14.2V6q0-.425.288-.712T12 5t.713.288T13 6v8.2l2.9-2.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.3.3-.7.3t-.7-.3l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275z" />
+                </svg></span></span></h3>
+          <h3><span class="information__span">Jade used:</span> <span data-jade-used>25,120 <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11 14.2V6q0-.425.288-.712T12 5t.713.288T13 6v8.2l2.9-2.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.3.3-.7.3t-.7-.3l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275z" />
+                </svg></span></span></h3>
+          <p><span class="information__span">5* obtained:</span> <span data-five-obtained>2 <span class="arrow-up"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="m11 8.8l-2.9 2.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.6-4.6q.3-.3.7-.3t.7.3l4.6 4.6q.275.275.275.7t-.275.7t-.7.275t-.7-.275L13 8.8V17q0 .425-.288.713T12 18t-.712-.288T11 17z" />
+                </svg></span></span></p>
+          <p><span class="information__span">4* obtained:</span> <span data-four-obtained>19 <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11 14.2V6q0-.425.288-.712T12 5t.713.288T13 6v8.2l2.9-2.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.3.3-.7.3t-.7-.3l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275z" />
+                </svg></span></span></p>
         </div>
 
         <div>
           <h3>50/50 win rate</h3>
-          <div class="win-rate-display">
-            69%
+          <div class="win-rate-display failure">
+            0%
           </div>
-          <p>Average 5* pity: 50</p>
+          <p class="bold">Average 5* pity: 78</p>
         </div>
       </div>
 
