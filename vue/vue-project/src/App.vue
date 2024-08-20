@@ -1,47 +1,77 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+  export default {
+    name: 'App',
+    data() {
+      return {
+        cardTitle: 'Card Title',
+        cardText: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+        cardButtonCta: 'Go somewhere'
+      }
+    }
+  }
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div id="app">
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <!-- Card -->
+    <article class="card">
 
-  <main>
-    <TheWelcome />
-  </main>
+      <!-- Card header -->
+      <div class="card__header">
+        <img src="https://placehold.co/300x200" alt="Placeholder image">
+      </div>
+
+      <!-- Card body -->
+      <div class="card__body">
+        <h3> {{ cardTitle }} </h3>
+        <p> {{ cardText }} </p>
+        <button> {{ cardButtonCta }} </button>  
+      </div>
+
+    </article>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+  .card {
+    width: 20rem;
+    max-width: 100%;
+    border: 1px solid hsl(0 0% 91% / .2);
+    border-radius: .5rem;
+    overflow: hidden
+  }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-@media (min-width: 1024px) {
-  header {
+  .card__header img {
+    display: block;
+    width: 100%;
+  }
+
+  .card__body {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    padding: 1rem;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .card__body h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  .card__body p {
+    font-size: 1.1rem;
   }
-}
+
+  .card__body button {
+    padding: .5rem .75rem;
+    color: inherit;
+    background-color: hsl(216, 98%, 52%);
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
 </style>
