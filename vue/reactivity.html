@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactivity</title>
+</head>
+<body>
+    <input type="text">
+
+    <h1 id="title"></h1>
+
+    <script>
+        const input = document.querySelector('input');
+        const title = document.getElementById('title');
+
+        input.addEventListener('keyup', (e) => {
+           title.textContent = input.value; 
+        });
+
+    </script>
+</body>
+</html>
