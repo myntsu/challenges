@@ -1,47 +1,54 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      courseName: '',
+      cityName: 'https://picsum.photos/400/300',
+
+      selectOptionDog: 'https://humanidades.com/wp-content/uploads/2017/02/perro-1-e1561678907722.jpg',
+      selectOptionCat: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/800px-Cat_November_2010-1a.jpg',
+      selectOptionWhale: 'https://cdn.britannica.com/37/75637-050-B425E8F1/Killer-whale.jpg',
+      selectedAnimal: ''
+    }
+  }
+}
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div id="app">
+    <h1>Welcome to the course! <span>
+        {{ courseName }}
+      </span>
+    </h1>
+
+    <input v-model="courseName">
+
+    <h2>Mi favorite city</h2>
+    <img :src="cityName">
+
+    <h2>Select your favorite animal:</h2>
+    <div>
+      <select v-model="selectedAnimal" name="selectAnimal" id="selectAnimal" placeholder="Select your animal">
+      <option :value="selectOptionDog">Dog</option>
+      <option :value="selectOptionCat">Cat</option>
+      <option :value="selectOptionWhale">Whale</option>
+    </select>
     </div>
-  </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <div>
+      <img :src="selectedAnimal" :alt="selectedAnimal">
+    </div>
+
+  </div>
+
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+span {
+  color: hsl(170 40% 70%);
 }
 </style>
