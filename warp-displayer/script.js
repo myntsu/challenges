@@ -31,3 +31,5 @@ app.get('/products/:id', (req, res) => {
 
   res.json(product);
 });
+
+const doingTheThing;
