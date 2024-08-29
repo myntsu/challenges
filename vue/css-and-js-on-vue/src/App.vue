@@ -29,6 +29,8 @@ export default {
   <select name="cars" id="cars">
       <option v-for="car in cars">{{ car }}</option>
   </select>
+
+  <p>doing a silly</p>
   
 </div>
 </template>
