@@ -14,7 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
-        <RouterLink to="/form">Form</RouterLink>
+        <RouterLink :to="{name: 'form', params: {entry: 1}}">Form</RouterLink>
       </nav>
     </div>
   </header>

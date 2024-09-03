@@ -1,20 +1,33 @@
 <template>
-    <div class="form">
-        <h1>This is a form page</h1>
-        <form action="" method="get">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
+    <div>
+        <h1>{{ entryTitle }}</h1>
+        <router-link :to="paginate(false)">Previous</router-link>
+        <router-link :to="paginate(true)">Next</router-link>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'form',
+    methods: {
+        paginate(nextPage) {
+            let entry = parseInt(this.$route.params.entry)
+
+            if(nextPage){
+                return entry < 10 ? `/form/${entry+1}` : `/form/${entry}`;
+            } else {
+                return entry > 1 ? `/form/${entry-1}` : `/form/${entry}`;
+            }
+        }
+    },
+
+    computed: {
+        entryTitle(){
+            return `Blog Entry ${this.$route.params.entry}`;
+        }
+    }
+}
+</script>
 
 <style>
 @media (min-width: 1024px) {
