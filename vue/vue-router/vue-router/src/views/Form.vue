@@ -37,6 +37,7 @@ export default {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     form {
