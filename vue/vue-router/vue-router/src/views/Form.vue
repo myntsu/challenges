@@ -38,6 +38,7 @@ export default {
         justify-content: center;
         flex-direction: column;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid: 0%;
     }
 
     form {
