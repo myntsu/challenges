@@ -1,20 +1,16 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+import { useStore } from 'vuex'
+const store = useStore()
+
+const increment = () => {
+  store.commit('increment');
+}
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+  <div>
+    <p>El contador es {{ store.state.count }}</p>
+    <button @click="increment">Incrementar valor</button>
   </div>
 </template>
 
@@ -36,6 +32,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;
