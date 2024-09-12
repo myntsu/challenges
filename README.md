@@ -6,6 +6,7 @@ Projects so far:
 - Infinite Scroller
 - Parallax Effect
 
-WIP:
 
-- Achievement Tracker Mock-up
+Done today:
+
+- Reviewed exams
