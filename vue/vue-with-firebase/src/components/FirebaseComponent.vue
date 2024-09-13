@@ -16,7 +16,9 @@
     export default {
         name: 'FirebaseComponent',
         data() {
-            products: [],
+            return {
+                products: [],
+            }
         },
 
         async mounted () {
