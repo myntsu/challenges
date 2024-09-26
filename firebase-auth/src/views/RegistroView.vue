@@ -1,8 +1,8 @@
 <template>
-    <div id="app">
+    <div>
       <form action="" @submit.prevent>
         <div>
-          <h2></h2>
+          <h2>Registro</h2>
           <input type="email" v-model="email" placeholder="Correo electrónico">
           <input type="password" v-model="password" placeholder="Contraseña">
   
