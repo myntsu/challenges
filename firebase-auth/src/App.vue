@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Mi primer hosting de Firebase</h1>
     <router-link to="/">Home</router-link>
     <router-link v-if="isLoggedIn" to="/secret">Secret</router-link>
     <router-link v-if="!isLoggedIn" to="/registro">Registro</router-link>
