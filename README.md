@@ -9,4 +9,4 @@ Projects so far:
 
 WIP:
 
-- Warp displayer - HSR
+- Warp displayer - HSR (wip)
