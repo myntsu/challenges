@@ -10,3 +10,4 @@ Projects so far:
 Today:
 
 - Doing iCode tasks challenges
+- The thing
