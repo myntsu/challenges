@@ -11,4 +11,5 @@ Today:
 
 - Doing iCode tasks challenges
 - Working on mock-up MuhRO, pet index
+- Shores
 
