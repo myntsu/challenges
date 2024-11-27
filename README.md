@@ -6,3 +6,7 @@ Projects so far:
 - Infinite Scroller
 - Parallax Effect
 - HSR - Warp Displayer
+
+Today:
+
+- Chores and challenges
