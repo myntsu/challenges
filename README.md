@@ -9,4 +9,4 @@ Projects so far:
 
 Today:
 
-- Chores and challenges
+- Chores and challenges x2
