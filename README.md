@@ -9,4 +9,4 @@ Projects so far:
 
 Today:
 
-- Chores and challenges x2
+- Just chores and duo
