@@ -10,3 +10,4 @@ Projects so far:
 Today:
 
 - Just chores and duo
+- Duo, chores, stuff
