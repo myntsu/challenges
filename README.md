@@ -9,6 +9,4 @@ Projects so far:
 
 Today:
 
-- Just chores and duo
-- Duo, chores, stuff
-- More chores, duo, training
+- Weekly reset
