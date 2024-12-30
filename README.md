@@ -6,4 +6,4 @@ Projects so far:
 - Infinite Scroller
 - Parallax Effect
 - HSR - Warp Displayer
-- Working on RO pet index
+- Working on RO pet index (x2)
