@@ -6,4 +6,8 @@ Projects so far:
 - Infinite Scroller
 - Parallax Effect
 - HSR - Warp Displayer
-- Working on RO pet index (x2)
+
+WIP:
+
+- Working on RO pet index (still in progress)
+- Working on RO sheet for farming spots
