@@ -10,4 +10,4 @@ Projects so far:
 WIP:
 
 - Working on RO pet index (still in progress)
-- Working on RO sheet for farming spots
+- Working on RO sheet for farming spots (x2)
