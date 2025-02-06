@@ -6,3 +6,7 @@ Projects so far:
 - Infinite Scroller
 - Parallax Effect
 - HSR - Warp Displayer
+
+Working on:
+
+- DataAnnotation (no code related)
