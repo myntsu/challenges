@@ -11,4 +11,4 @@ Working on:
 
 - DataAnnotation (no code related)
 - Outlier (no code related)
-- More Outlier work
+- Outlier Webinar
