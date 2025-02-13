@@ -11,4 +11,4 @@ Working on:
 
 - DataAnnotation (no code related)
 - Outlier (no code related)
-- Outlier Webinar
+- Goodle Ads training + Outlier
