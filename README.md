@@ -12,3 +12,4 @@ Working on:
 - DataAnnotation (no code related)
 - Outlier (no code related)
 - Goodle Ads training + Outlier
+- Boyfailuring
