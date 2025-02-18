@@ -9,7 +9,4 @@ Projects so far:
 
 Working on:
 
-- DataAnnotation (no code related)
-- Outlier (no code related)
-- Goodle Ads training + Outlier
-- Boyfailuring
+- Re-organizing week, selling aparments
