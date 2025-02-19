@@ -9,4 +9,4 @@ Projects so far:
 
 Working on:
 
-- Re-organizing week, selling aparments
+- Re-organizing week, selling aparments (done)
